@@ -11,7 +11,12 @@ Docker:
         3. Log out and log back in so that your group membership is re-evaluated.
 
 Laravel:
-    failed to open stream:
-
+    Warning: 
+        require(/var/www/html/public/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/html/public/index.php on line 24
     Fix: 
-    
+        sudo apt install composer
+
+    Fatal error:
+        Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /var/www/html/bootstrap/app.php:14 
+    Fix:
+        composer update --no-scripts
