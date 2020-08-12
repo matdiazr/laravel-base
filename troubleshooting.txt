@@ -1,0 +1,17 @@
+Docker: 
+    Docker-Compose ERROR: 
+        Couldn’t connect to Docker daemon at http+docker://<DOCKER_HOST> — is it running?
+    Fix:
+        Simple solution is running with sudo 
+
+        If you want to run the command without prefixing it every time with sudo do like that (as written here):
+
+        1. Create the docker group: $ sudo groupadd docker
+        2. Add your user to the docker group:$ sudo usermod -aG docker $USER
+        3. Log out and log back in so that your group membership is re-evaluated.
+
+Laravel:
+    failed to open stream:
+
+    Fix: 
+    

@@ -1,0 +1,27 @@
+Ambiente:
+    git:
+        sudo apt install git
+    
+    docker:
+        sudo apt install docker.io
+        sudo apt install docker-compose
+
+Editor de texto:
+    visual Code:
+        e puede instalar directamente desde la aplicación ubuntu software.
+
+Terminal: 
+    terminator:
+        se puede instalar directamente desde la aplicación ubuntu software.
+
+    ho my zsh:
+        https://geekytheory.com/como-instalar-oh-my-zsh-en-ubuntu
+
+        sudo apt-get install zsh
+        sudo apt-get install git-core
+        wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+
+
+Lenguajes:
+    
