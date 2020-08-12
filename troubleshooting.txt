@@ -11,6 +11,12 @@ Docker:
         3. Log out and log back in so that your group membership is re-evaluated.
 
 Laravel:
+    The stream or file 
+        "/var/www/html/storage/logs/laravel.log" could not be opened in append mode: failed to open stream: Permission denied
+    Fix:
+        - cd var/www/html
+        - sudo chmod a+rwx -R /storage
+        
     Warning: 
         require(/var/www/html/public/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/html/public/index.php on line 24
     Fix: 

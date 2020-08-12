@@ -3,9 +3,25 @@ Ambiente:
         sudo apt install git
     
     docker:
-        sudo apt install docker.io
-        sudo apt install docker-compose
+        - sudo apt-get update
+        - sudo apt-get install \
+            apt-transport-https \
+            ca-certificates \
+            curl \
+            gnupg-agent \
+            software-properties-common
+        - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+        - sudo add-apt-repository \
+            "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+            $(lsb_release -cs) \
+            stable"
+        - sudo apt-get update
+        - sudo apt-get install docker-ce docker-ce-cli containerd.io
 
+        compose:
+            - sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            - sudo chmod +x /usr/local/bin/docker-compose
+            
 Editor de texto:
     visual Code:
         e puede instalar directamente desde la aplicación ubuntu software.
@@ -17,17 +33,17 @@ Terminal:
     ho my zsh:
         https://geekytheory.com/como-instalar-oh-my-zsh-en-ubuntu
 
-        sudo apt-get install zsh
-        sudo apt-get install git-core
-        wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+        - sudo apt-get install zsh
+        - sudo apt-get install git-core
+        - wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
 Lenguajes:
     php: 
-        sudo apt update
-        sudo apt install php php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd  php-mbstring php-curl php-xml php-pear php-bcmath
+        - sudo apt update
+        - sudo apt install php php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd  php-mbstring php-curl php-xml php-pear php-bcmath
     
         composer:
-            sudo apt install composer
+            - sudo apt install composer
 
     laravel:
-        docker-compose run --rm npm install
+        - docker-compose run --rm npm install
