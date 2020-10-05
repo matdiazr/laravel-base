@@ -20,9 +20,9 @@ Laravel:
     Warning: 
         require(/var/www/html/public/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/html/public/index.php on line 24
     Fix: 
+        dentro del projecto
         sudo apt install composer
+        composer update
+        instalar todas las dependencias necesarias
+        
 
-    Fatal error:
-        Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /var/www/html/bootstrap/app.php:14 
-    Fix:
-        composer update --no-scripts
